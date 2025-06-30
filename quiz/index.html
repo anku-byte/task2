@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuizWorld</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">QuizWorld</div>
+  </nav>
+
+  <div id="welcomePage" class="screen">
+    <h1>Welcome to QuizWorld</h1>
+    <p>Test your knowledge about India's rich culture and history!</p>
+    <button onclick="showInstructions()">Start</button>
+  </div>
+
+  <div id="instructionPage" class="screen hidden">
+    <h2>Instructions</h2>
+    <ul>
+      <li>This quiz contains 30 questions.</li>
+      <li>Each correct answer: <strong>+4</strong> ✅</li>
+      <li>Each incorrect answer: <strong>-1</strong> ❌</li>
+      <li>Unattempted questions: <strong>0</strong></li>
+      <li>Click Start to begin the quiz 🎯</li>
+      <li>All the Best!</li>
+    </ul>
+    <button onclick="startQuiz()">Start Quiz</button>
+  </div>
+
+  <div id="quizPage" class="screen hidden">
+    <div class="quiz-box">
+      <div id="questionNumber"></div>
+      <div id="questionText"></div>
+      <div id="optionsContainer"></div>
+      <div id="answerStatus"></div>
+      <button onclick="clearSelection()">Clear</button>
+      <button onclick="nextQuestion()">Next</button>
+    </div>
+  </div>
+
+  <div id="resultPage" class="screen hidden">
+    <h2>Quiz Completed!</h2>
+    <p id="resultText"></p>
+    <button onclick="location.reload()">Restart Quiz</button>
+  </div>
+
+  <footer>
+    &copy; 2025 QuizWorld. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
